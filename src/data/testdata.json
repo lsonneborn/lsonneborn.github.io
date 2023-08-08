@@ -8,14 +8,14 @@
   }, {
     "_id": 2,
     "name": "Bread",
-    "inStock": true,
-    "bestBeforeDate": "2023-08-05",
+    "inStock": false,
+    "bestBeforeDate": "2023-09-05",
     "storeDays": 3,
     "category": "food"
   }, {
     "_id": 3,
     "name": "Shampoo",
-    "inStock": false,
+    "inStock": true,
     "bestBeforeDate": "2024-01-21",
     "storeDays": 3,
     "category": "cosmetics"
