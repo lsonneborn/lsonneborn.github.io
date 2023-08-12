@@ -15,10 +15,10 @@ const BestBefore = ({ jsonData }: BestBeforeProps) => {
   const [listData, setListData] = useState(jsonData);
   const [showAddForm, setShowAddForm] = useState(false);
   const [showEditForm, setShowEditForm] = useState(false);
-  const [initialDataForEdit, setInitialDataForEdit] = useState({
+  const [initialDataForEdit, setInitialDataForEdit] = useState<Item>({
     _id: 0,
     name: "",
-    bestBeforeDate: new Date(),
+    bestBeforeDate: null,
     inStock: false,
     storeDays: 0,
     category: "food",
@@ -78,7 +78,7 @@ const BestBefore = ({ jsonData }: BestBeforeProps) => {
       setInitialDataForEdit({
         _id: 0,
         name: "",
-        bestBeforeDate: new Date(),
+        bestBeforeDate: null,
         inStock: false,
         storeDays: 0,
         category: "food",
@@ -248,7 +248,11 @@ const BestBefore = ({ jsonData }: BestBeforeProps) => {
                   <tr
                     key={data["_id"]}
                     className={
-                      data["bestBeforeDate"] > today
+                      data["bestBeforeDate"] === null
+                        ? data["inStock"]
+                          ? ""
+                          : "table-warning"
+                        : data["bestBeforeDate"] > today
                         ? data["inStock"]
                           ? ""
                           : "table-warning"

@@ -16,7 +16,7 @@ import BestBefore from "./pages/BestBefore";
 const App = () => {
   const jsonDataWithDates = jsonData.map((item) => ({
     ...item,
-    bestBeforeDate: new Date(item.bestBeforeDate),
+    bestBeforeDate: item.bestBeforeDate ? new Date(item.bestBeforeDate) : null,
   }));
 
   return (

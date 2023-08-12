@@ -2,7 +2,7 @@ interface Item {
   _id: number;
   name: string;
   inStock: boolean;
-  bestBeforeDate: Date;
+  bestBeforeDate: Date | null;
   storeDays: number;
   category: string;
 }

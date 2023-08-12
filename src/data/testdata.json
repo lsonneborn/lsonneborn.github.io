@@ -16,7 +16,7 @@
     "_id": 3,
     "name": "Shampoo",
     "inStock": true,
-    "bestBeforeDate": "2024-01-21",
+    "bestBeforeDate": null,
     "storeDays": 3,
     "category": "cosmetics"
   }]
